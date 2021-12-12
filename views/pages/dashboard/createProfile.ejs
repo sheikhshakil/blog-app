@@ -1,0 +1,101 @@
+<%- include('../../partials/header.ejs') %>
+<%- include('../../partials/navbar.ejs') %>
+
+<div class="container py-4">
+    <h2 class="text-center mb-3">Create Profile</h2>
+
+    <!-- create profile form -->
+    <div>
+        <form action="/dashboard/create-profile" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-4 pt-5 text-center border border-success rounded">
+                    <img src="<%= user.profilePic %> " alt="Profile Pic" id="profilePic"
+                        class="img-thumbnail img-fluid">
+                    <div class="form-group mt-5">
+                        <label for="profilePic">Upload your photo: </label>
+                        <input type="file" name="profilePic" id="profilepic" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>NAME</b>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="c-name" value="<%= user.name %> "disabled>
+                    </div>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>USERNAME</b>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="c-username" value="<%= user.username %> " disabled>
+                    </div>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>EMAIL</b>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" id="c-email" value="<%= user.email %> " disabled>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="bio" id="bio" rows="3" class="form-control"
+                            placeholder="Write your bio.."></textarea>
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>Country</b>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="country" name="country"
+                            placeholder="Country you born in..">
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>FACEBOOK</b>
+                            </div>
+                        </div>
+
+                        <!-- - use kora jabena -->
+
+                        <input type="text" class="form-control" id="link-fb" name="linkfb"
+                            placeholder="Facebook ID Link">
+                    </div>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>GITHUB</b>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="link-github" name="linkgithub"
+                            placeholder="Github ID Link">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <b>TWITTER</b>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="link-twitter" name="linktwitter"
+                            placeholder="Twitter ID Link">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success btn-lg">Update Info</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+
+<%- include('../../partials/footer.ejs') %>

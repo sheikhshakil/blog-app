@@ -1,0 +1,28 @@
+.signup, .home, .login {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.signup, .login{
+    background-color: rgba(227, 253, 236, 0.37);
+    padding: 1.5rem 1.5rem;
+    border-radius: 2%;
+    border: 1px solid rgb(197, 197, 197);
+    
+}
+.form-control {
+    height: 70%;
+}
+
+footer {
+    background-color: black;
+    padding: 1rem 0 1rem 0;
+}
+
+footer div p {
+    color: white;
+}
+
+#link-fb, #link-github, #link-twitter, #c-name, #c-username, #c-email, #country {
+    height: 2.5rem;
+}
